@@ -2,7 +2,6 @@
 NixOS configuration on Chuwi Minibook X N100
 
 ## Not Working
-* Night light does not work
 * BIOS does not support rotating display
 
 ### Not Working Workarounds
@@ -24,4 +23,22 @@ services.xserver.xrandrHeads = [
   output = "DSI-1";
 }
 ];
+```
+* Use redshift for night light configured in /etc/nixos/configuration.nix
+```
+  location.latitude = 100.0;
+  location.longitude = -100.0;
+  location.provider = "manual";
+  services.redshift = {
+    enable = true;
+    brightness = {
+      # Note the string values below.
+      day = "1";
+      night = "1";
+    };
+    temperature = {
+      day = 6500;
+      night = 3700;
+    };
+  };
 ```

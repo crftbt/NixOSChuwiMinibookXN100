@@ -1,5 +1,5 @@
-# NixOSChuwiMinibookXN100
-NixOS configuration on Chuwi Minibook X N100
+# NixOS on Chuwi Minibook X N100
+NixOS configuration for the Chuwi Minibook X N100.
 
 ## Not Working
 * BIOS does not support rotating display
